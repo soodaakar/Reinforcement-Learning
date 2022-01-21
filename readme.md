@@ -77,7 +77,7 @@ the data for one episode.
 
 Below is the graph representing the total reward graph over 250 days:
 
-<img width="412" alt="Rewards" src="https://user-images.githubusercontent.com/47882482/150590417-f967ed97-ee64-45bd-a64e-6d232362eb5f.png">
+<img width="958" alt="Validate_rewards" src="https://user-images.githubusercontent.com/47882482/150590526-62b0e064-907b-4b82-997e-7bf814405bc4.png">
 
 Figure 3: This is an image showing the rewards earned over a span of 250 days.
 The total balance over time is coming out to be $176207.54 which basically
