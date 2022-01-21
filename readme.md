@@ -30,7 +30,7 @@ the rewards it receives when it takes an action. Rewards here are associated
 to whether the action of agent is profitable or incur losses. If it incur losses
 the rewards will be negative or else positive. Below is the formula for updating
 q-values:
-Q(s, a) = (1 − ↵) ⇤ Q(s, a) + ↵ ⇤ (r + " ⇤ Q(s0, a0))
+![alt text](https://github.com/[soodaakar]/[Reinforcement-Learning]/blob/[Screenshot]/Q-Learning equation.png?raw=true)
 In the above equation ↵ is the learning rate, " is the discount factor, r is the
 rewards it obtained from the previous action, Q(s,a) indicates the state and
 action in which agent was earlier and Q(s’,a’) indicates the state and action the
@@ -44,7 +44,7 @@ an agent to explore.
 4.1 Training
 In the training phase we have initialized our agent with certain parameters and
 there values is as follow:
-• ↵ = 0.6
+* ↵ = 0.6
 • " = 0.9
 • no episodes = 1000
 • decay = 0.001
