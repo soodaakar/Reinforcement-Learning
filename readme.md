@@ -30,8 +30,10 @@ the rewards it receives when it takes an action. Rewards here are associated
 to whether the action of agent is profitable or incur losses. If it incur losses
 the rewards will be negative or else positive. Below is the formula for updating
 q-values:
-Q(s, a) = (1 − ↵) ⇤ Q(s, a) + ↵ ⇤ (r + " ⇤ Q(s0, a0))
-In the above equation ↵ is the learning rate, " is the discount factor, r is the
+
+![Q-Learning equation](https://user-images.githubusercontent.com/47882482/150589583-cd3b143f-dfdc-43d0-af58-c0cfd93b9175.png)
+
+In the above equation alpha is the learning rate, gamma is the discount factor, r is the
 rewards it obtained from the previous action, Q(s,a) indicates the state and
 action in which agent was earlier and Q(s’,a’) indicates the state and action the
 agent is in right now. The agent generally takes the action which maximizes
@@ -41,29 +43,42 @@ the agent’s part. In the initial phases of learning we want our agent to explo
 more and in the later stages we want our agent to exploit more. This can be
 controlled using the epsilon parameter which is nothing but the probability of
 an agent to explore.
-4.1 Training
+
+### Training
 In the training phase we have initialized our agent with certain parameters and
 there values is as follow:
-• ↵ = 0.6
-• " = 0.9
-• no episodes = 1000
-• decay = 0.001
+
+* alpha = 0.6
+* gamma = 0.9
+* no episodes = 1000
+* decay = 0.001
+
 The training of the agent ran for 1000 iterations as mentioned above. Below are
 some of the graphs for training:
+
+<img width="412" alt="Rewards" src="https://user-images.githubusercontent.com/47882482/150590038-c9397f22-3e30-4892-af3a-664c1af84eff.png">
+
 Figure 1: This is an image showing the rewards earned per episode.
-2
+
 From the above graph we can see that the model initial started with negative
 rewards and then slow learning iteration by iteration increases the rewards value
+
+<img width="396" alt="epsilon_decay" src="https://user-images.githubusercontent.com/47882482/150590247-a1796f3f-2bae-4578-8ef5-383272603c20.png">
+
 Figure 2: This is an image showing how agent’s exploration probability is decreasing
 per episode.
 In the above graph we can see how exponentially the probability of exploration
 for model is decreasing per episode.
-4.2 Testing
+
+### Testing
 After training the agent for 1000 iterations we have created a Q-table consisting
 of the next best possible action based on the given state. We run our agent on
 the data for one episode.
+
 Below is the graph representing the total reward graph over 250 days:
-3
+
+<img width="958" alt="Validate_rewards" src="https://user-images.githubusercontent.com/47882482/150590526-62b0e064-907b-4b82-997e-7bf814405bc4.png">
+
 Figure 3: This is an image showing the rewards earned over a span of 250 days.
 The total balance over time is coming out to be $176207.54 which basically
 means that over a span of 250 days the agent started from $100k and is ending
